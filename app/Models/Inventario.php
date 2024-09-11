@@ -14,6 +14,6 @@ class Inventario extends Model
         'nombre',
         'cantidad',
         'precio',
-        'ubicacion',
+        'ubicacion'
     ];
 }
