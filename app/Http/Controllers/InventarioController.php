@@ -86,4 +86,16 @@ class InventarioController extends Controller
 
         return response()->json(['error' => 'Inventario no encontrado'], 404);
     }
+
+    public function findByName($nombre)
+{
+    $inventarios = Inventario::where('nombre', 'like', '%' . $nombre . '%')->get();
+
+    if ($inventarios->isEmpty()) {
+        return response()->json(['message' => 'No se encontraron productos con ese nombre'], 404);
+    }
+
+    return response()->json($inventarios);
+}
+
 }

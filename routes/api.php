@@ -9,3 +9,4 @@ Route::get('/inventarios/{id}', [InventarioController::class, 'show']); // Mostr
 Route::post('/inventarios', [InventarioController::class, 'store']); // Crear
 Route::put('/inventarios/{id}', [InventarioController::class, 'update']); // Actualizar
 Route::delete('/inventarios/{id}', [InventarioController::class, 'destroy']); // Eliminar
+Route::get('/inventarios/nombre/{nombre}', [InventarioController::class, 'findByName']);
